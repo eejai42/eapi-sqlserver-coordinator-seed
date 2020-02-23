@@ -1,0 +1,94 @@
+{
+  "ShowHidden": false,
+  "ShowAllFiles": false,
+  "SaveDisabled": false,
+  "SSoTmeProjectId": "3c107f35-85eb-4847-8bbe-dcdc046b1f16",
+  "Name": "dotnetSeed2",
+  "ProjectSettings": [
+    {
+      "ProjectSettingId": "52298204-f642-4a83-ab51-658e983b8f07",
+      "Name": "project-name",
+      "Value": "project-name"
+    },
+    {
+      "ProjectSettingId": "73d856e2-d60b-4c31-a91c-a49dec2fbc9f",
+      "Name": "amqps",
+      "Value": "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/your-project-url"
+    },
+    {
+      "ProjectSettingId": "5e421284-8add-480d-bec1-8e84c1720b26",
+      "Name": "make-fks-collections",
+      "Value": "true"
+    },
+    {
+      "ProjectSettingId": "be38f7bb-d637-4d90-b8dc-09069d98509c",
+      "Name": "serialize-to-original-names",
+      "Value": "true"
+    },
+    {
+      "ProjectSettingId": "a812c16f-974d-4aae-a0d3-68ea4cc0634b",
+      "Name": "list-suffix",
+      "Value": "Expanded"
+    },
+    {
+      "ProjectSettingId": "40484594-d24a-4e96-8551-f72c99caea63",
+      "Name": "include-load-methods",
+      "Value": "false"
+    },
+    {
+      "ProjectSettingId": "71f01193-aad4-409b-8e17-b90bb99bddf1",
+      "Name": "init-lists",
+      "Value": "false"
+    },
+    {
+      "ProjectSettingId": "928dbe3b-5324-4dea-832c-c7aa8044ae48",
+      "Name": "legacy",
+      "Value": "false"
+    },
+    {
+      "ProjectSettingId": "94d49088-739f-4063-b1e9-22316a7a0903",
+      "Name": "namespace",
+      "Value": "YourProject.Lib.DataClasses"
+    },
+    {
+      "ProjectSettingId": "0b9e2524-2f35-4d8f-86e0-8bd2aaf251e8",
+      "Name": "dataclasses-namespace",
+      "Value": "YourProject.Lib.DataClasses"
+    }
+  ],
+  "ProjectTranspilers": [
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ddeef526-5399-4be1-a676-8c64961e549d",
+        "Name": "SSoT",
+        "Description": "SSoT"
+      },
+      "ProjectTranspilerId": "590c469f-c55e-479a-9165-11191de6e23d",
+      "Name": "SSoT",
+      "RelativePath": "",
+      "CommandLine": "effortless/ssot"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
+        "Name": "SmqlToCSharpRabbitMQ",
+        "Description": "Smql To CSharp RabbitMQ"
+      },
+      "ProjectTranspilerId": "38069e8e-e468-468f-adb6-06cbfe211251",
+      "Name": "SmqlToDotNetRabbitMQ",
+      "RelativePath": "/DotNet/DotNetClassLibrary/SassyMQ",
+      "CommandLine": "sassymq/smql-to-csharp-rabbitmq -i ../../../SassyMQ/Lexicon.smql -i ../../../ODXML/DataSchema.odxml -p smq-namespace=EffortlessApi.SassyMQ.Lib"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "595b7fe7-7f64-44c2-b48c-d096d997211f",
+        "Name": "OdxmlToCSharpPOCOs",
+        "Description": "Odxml To CSharp POCOs"
+      },
+      "ProjectTranspilerId": "05446ed8-0087-433d-a28b-948e30bbc8da",
+      "Name": "OdxmlToCSharpPOCOs",
+      "RelativePath": "/DotNet/DotNetClassLibrary/DataClasses",
+      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ../../../ODXML/DataSchema.odxml -p airtable=true"
+    }
+  ]
+}
