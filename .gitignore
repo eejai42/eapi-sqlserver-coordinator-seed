@@ -1,0 +1,6 @@
+/.vs/**/*
+/.ssotme/**/*
+/**/bin/**/*
+/**/obj/**/*
+/.idea/**/*
+/**/*.csproj.user
