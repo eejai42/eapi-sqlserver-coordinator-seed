@@ -89,6 +89,83 @@
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/DotNet/DotNetClassLibrary/DataClasses",
       "CommandLine": "odxml42/odxml-to-csharp-pocos -i ../../../ODXML/DataSchema.odxml -p airtable=true"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ccea0ffb-6635-4929-bb72-a54ed716d27c",
+        "Name": "OdxmlToSqlServerCreateDb",
+        "Description": "OdxmlToSqlServerCreateDb"
+      },
+      "ProjectTranspilerId": "64783785-aca0-4d95-b049-9ec3f381ea1e",
+      "Name": "OdxmlToSqlServerCreateDb",
+      "RelativePath": "/SqlServer",
+      "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ../ODXML/DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "91081c58-9a04-4646-8ffb-d5ca789916d2",
+        "Name": "OdxmlToCSharpSqlDataManager",
+        "Description": "Odxml To CSharp Sql Data Manager"
+      },
+      "ProjectTranspilerId": "5c1f0f1f-8256-44cc-8e5b-fd198e3ce498",
+      "Name": "OdxmlToCSharpSqlDataManager",
+      "RelativePath": "/DotNet/DotNetClassLibrary/SqlDataManager",
+      "CommandLine": "odxml42/odxml-to-csharp-sql-data-manager -i ../../../ODXML/DataSchema.odxml -p update-pk-on-insert=false"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "2b6f983c-9a21-4fc0-a71c-892f8ad90c03",
+        "Name": "OdxmlToSMQSqlServerCRUDHandler",
+        "Description": "OdxmlToSMQSqlServerCRUDHandler"
+      },
+      "ProjectTranspilerId": "92ddcff2-03ed-4ace-ad5e-5819203811c4",
+      "Name": "OdxmlToSMQAirtableCRUDHandler",
+      "RelativePath": "/DotNet/DotNetClassLibrary/EffortlessAPIHostedCore",
+      "CommandLine": "effortless/odxml-to-smq-sql-server-crud-handler -i ../../../ODXML/DataSchema.odxml -p actors=Guest,Admin,User,CRUDCoordinator -p crud-coordinator=CRUDCoordinator -p user-name=AppUser"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+        "Name": "OdxmlToNodeJSDocs",
+        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema."
+      },
+      "ProjectTranspilerId": "dccec706-2653-4293-81c5-c18ff8b496c4",
+      "Name": "OdxmlToNodeJSDocs",
+      "RelativePath": "/docs/Schema",
+      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ../../ODXML/DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+        "Name": "SmqlToDocs",
+        "Description": "Converts an Smql file into documentation."
+      },
+      "ProjectTranspilerId": "adfd6cca-27b4-4e22-9426-24c068377aa2",
+      "Name": "SmqlToDocs",
+      "RelativePath": "/docs/SassyMQ",
+      "CommandLine": "sassymq/smql-to-docs -i ../../SassyMQ/Lexicon.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ba509977-74bf-486e-a405-1b2125bd5d15",
+        "Name": "XmlToJson",
+        "Description": "Converts XML to JSON using the NewtonSoft C# conversion tools."
+      },
+      "ProjectTranspilerId": "8a06853b-00d2-419c-b754-ab699acbe0f9",
+      "Name": "XmlToJson",
+      "RelativePath": "/docs/SassyMQ",
+      "CommandLine": "codee42/xml-to-json -i ./Lexicon.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "742ad9bf-3931-4c58-a73e-1ea26ab7ad72",
+        "Name": "SmqlToJavascriptRabbitMQ",
+        "Description": "Creates a Javascript client library for Rabbit MQ, given an Smtl file."
+      },
+      "ProjectTranspilerId": "341a8b73-2a39-4454-91c1-82268cb0fb25",
+      "Name": "SmqlToJavascriptRabbitMQ",
+      "RelativePath": "/docs/SassyMQJS",
+      "CommandLine": "sassymq/smql-to-javascript-rabbitmq -i ../SassyMQ/Lexicon.smql -p legacy=false -p angular=false"
     }
   ]
 }
