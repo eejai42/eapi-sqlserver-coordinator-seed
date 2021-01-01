@@ -1,4 +1,4 @@
-using dc = YourProject.Lib.DataClasses;
+using dc = ejtictactoedemo.Lib.DataClasses;
 using System;
 using System.IO;
 using System.Collections.Generic;

@@ -7,7 +7,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using YourProject.Lib.DataClasses;
+using ejtictactoedemo.Lib.DataClasses;
 
 namespace EffortlessApi.SassyMQ.Lib
 {
