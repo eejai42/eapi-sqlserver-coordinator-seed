@@ -1,18 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetClassLibrary", "DotNet\DotNetClassLibrary\DotNetClassLibrary.csproj", "{7CA81F21-9B44-41F1-B4C5-722220CE4F51}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SSoT", "SSoT", "{4DDDD5D7-3261-43E4-B21E-63F104952ACC}"
 	ProjectSection(SolutionItems) = preProject
-		ODXML\DataSchema.odxml = ODXML\DataSchema.odxml
+		..\sd1-sql-server\ODXML\DataSchema.odxml = ..\sd1-sql-server\ODXML\DataSchema.odxml
 		README.md = README.md
 		SSoTmeProject.json = SSoTmeProject.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "DotNet\ConsoleApp1\ConsoleApp1.csproj", "{4F694602-37C3-4BBA-86F5-C2D2C11306F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server", "SQL Server", "{288D89A2-859C-4747-93E6-34E53594C1B6}"
+	ProjectSection(SolutionItems) = preProject
+		..\sd1-sql-server\SqlServer\CalculatedViews\CalculatedViews.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\CalculatedViews.sql
+		..\sd1-sql-server\SqlServer\CalculatedViews\SynchronizeRawValues.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\SynchronizeRawValues.sql
+		..\sd1-sql-server\SqlServer\CalculatedViews\temp.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\temp.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

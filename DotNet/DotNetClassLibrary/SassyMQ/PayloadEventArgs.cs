@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YP.SassyMQ.Lib.RabbitMQ
+namespace EffortlessApi.SassyMQ.Lib
 {
     public class PayloadEventArgs : EventArgs
     {

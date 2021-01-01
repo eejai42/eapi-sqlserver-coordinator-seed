@@ -1,5 +1,4 @@
-using dc = yourproject.Lib.DataClasses;
-using yourproject.Lib.SqlDataManagement;
+using dc = YourProject.Lib.DataClasses;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using EffortlessApi.SassyMQ.Lib;
 using EffortlessAPIHostedCore;
+using dotnetSeed2.Lib.SqlDataManagement;
 
 namespace EffortlessAPI.CRUD
 {
@@ -19,18 +19,21 @@ namespace EffortlessAPI.CRUD
         public string IPAddress { get; set; }
         public DateTime OnlineSince { get; private set; }
 
-        internal void Start()
+        public void Start()
         {
             this.CRUDCoordinator.WaitForComplete();
         }
 
         private DirectoryInfo BasePath { get; }
+        public static string DBConnectionString { get; set; }
+
         private SqlDataManager APIWrapper;
 
         public SMQSqlServerCRUDHandler(string amqps, string dbcs, String rootPath)
         {
             this.OnlineSince = DateTime.UtcNow;
             this.BasePath = new DirectoryInfo(rootPath);
+            SMQSqlServerCRUDHandler.DBConnectionString = dbcs;
             this.APIWrapper = new SqlDataManager(dbcs);
             this.Roles = "Guest,ServiceCoordinator,User,Admin,CRUDCoordinator".Split(",".ToCharArray()).ToList();
 
@@ -82,8 +85,8 @@ namespace EffortlessAPI.CRUD
                     catch { } // Ignore errors
                 }
             });
-        }       
-        
+        }
+
         private void CRUDCoordinator_GuestWhoAreYouReceived(object sender, PayloadEventArgs e)
         {
             if (!String.IsNullOrEmpty(e.Payload.WhoAreYouRelativeUrl))
@@ -112,7 +115,7 @@ namespace EffortlessAPI.CRUD
             e.Payload.SassyMQJsActorsByName = new Dictionary<String, string>();
             foreach (var role in this.Roles)
             {
-                e.Payload.SassyMQJsActorsByName[role] = String.Format("http://{0}/SassyMQ/jsActors/smq{1}.js", this.IPAddress, role);
+                e.Payload.SassyMQJsActorsByName[role] = string.Format("http://{0}/SassyMQ/jsActors/smq{1}.js", this.IPAddress, role);
             }
             e.Payload.OnlineSince = this.OnlineSince;
             e.Payload.AppVersion = ConfigurationManager.AppSettings["version"];
@@ -120,26 +123,26 @@ namespace EffortlessAPI.CRUD
 
         private void CRUDCoordinator_GuestWhoAmIReceived(object sender, PayloadEventArgs e)
         {
-            e.Payload.SingletonAppUser = e.Payload.AccessToken.GetJWT<dc.AppUser>();
+            e.Payload.SingletonAppUser = e.Payload.AccessToken.GetJWT<dc.User>();
             e.Payload.OnlineSince = this.OnlineSince;
         }
 
-        private dc.AppUser CheckPayload(StandardPayload payload, string role, string eventName)
+        private dc.User CheckPayload(StandardPayload payload, string role, string eventName)
         {
-            var apiUser = payload.AccessToken.GetJWT<dc.AppUser>();
+            var apiUser = payload.AccessToken.GetJWT<dc.User>();
             if (!String.IsNullOrEmpty(payload.AirtableWhere))
             {
-                payload.AirtableWhere = payload.AirtableWhere.Replace("AppUser.EmailAddress$", apiUser.EmailAddress);
+                payload.AirtableWhere = payload.AirtableWhere.Replace("$User.EmailAddress$", apiUser.EmailAddress);
             }
             
-            if ((apiUser.Role != role) && !String.Equals(apiUser.Role, "Admin", StringComparison.OrdinalIgnoreCase)) 
+            if ((!apiUser.Roles.Contains(role)) && !apiUser.Roles.Contains("Admin", StringComparer.OrdinalIgnoreCase)) 
             {
                 throw new UnauthorizedAccessException(String.Format("{0} requires {1} access", eventName, role));
             }
             else return apiUser;
         }
 
-        private static bool CheckPayloadForPasswordMismatches(dc.AppUser apiUser, string payloadSHA256DemoPassword, string payloadDemoPassword)
+        private static bool CheckPayloadForPasswordMismatches(dc.User apiUser, string payloadSHA256DemoPassword, string payloadDemoPassword)
         {// AppUser  based on AppUser
                 return false;
                                 
@@ -147,7 +150,7 @@ namespace EffortlessAPI.CRUD
 
         private void Cc_GuestCRUDValidateTemporaryAccessTokenReceived(object sender, PayloadEventArgs e)
         {
-            var apiUsers = this.APIWrapper.GetAllAppUsers<dc.AppUser>("EmailAddress = '" + e.Payload.EmailAddress + "'");
+            var apiUsers = this.APIWrapper.GetAllUsers<dc.User>("EmailAddress = '" + e.Payload.EmailAddress + "'");
             var matchingUser = apiUsers.FirstOrDefault(fodUser => (fodUser != null) && (fodUser.EmailAddress == e.Payload.EmailAddress));
             
             bool passwordMismatch = CheckPayloadForPasswordMismatches(matchingUser, e.Payload.SHA256DemoPassword, e.Payload.DemoPassword);

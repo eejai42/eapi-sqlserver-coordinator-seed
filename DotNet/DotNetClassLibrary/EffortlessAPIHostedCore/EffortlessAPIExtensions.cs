@@ -42,6 +42,11 @@ namespace EffortlessAPIHostedCore
             else return value.ToString();
         }
 
+        public static String ToSqlSafeString(this object value)
+        {
+            return value.SafeToString().Replace("'", "''");
+        }
+
         /// <summary>
         /// Convert a string to it's proper (title) case
         /// </summary>

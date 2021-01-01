@@ -1,4 +1,5 @@
 ﻿using EffortlessApi.SassyMQ.Lib;
+using EffortlessAPI.CRUD;
 using Newtonsoft.Json;
 using System;
 using System.Threading;
@@ -10,39 +11,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var amqps = "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/YOUR-PROJECT-URL";
-            var guest = new SMQGuest(amqps);
-            var payload = guest.CreatePayload();
-            payload.EmailAddress = "test@test.com";
-            payload.DemoPassword = "password123";
-            var waiting = false;
-            guest.ValidateTemporaryAccessToken(payload, (reply, bdea) =>
-            {
-                var admin = new SMQAdmin(amqps);
-                admin.AccessToken = reply.AccessToken;
-                payload = admin.CreatePayload();
-
-                admin.GetTABLEXYZ(payload, (nsReply, nsBdea) =>
-                {
-                    Console.WriteLine(JsonConvert.SerializeObject(nsReply.TABLEXYZs, Formatting.Indented));
-                    waiting = false;
-                }, (error, ebdea) =>
-                {
-                    Console.WriteLine("ERROR: {0}", error.ErrorMessage);
-                    waiting = false;
-                });
-            }, (error, ebdea) =>
-            {
-                Console.WriteLine("ERROR: {0}", error.ErrorMessage);
-                    waiting = false;
-            });
-            Task.Factory.StartNew(() =>
-            {
-                while (waiting)
-                {
-                    Thread.Sleep(10);
-                }
-            }).Wait();
+            var amqps = "amqps://cli-qbod3_coordinator:test@effortlessapi-rmq.ssot.me/cli-qbod3";
+            var crudHandler = new SMQSqlServerCRUDHandler(amqps, "data source=.;initial catalog=cli-qbod3;integrated security=SSPI;", "C:/temp/sql");
+            crudHandler.Start();
         }
     }
 }
