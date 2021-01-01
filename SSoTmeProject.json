@@ -57,7 +57,7 @@
     {
       "ProjectSettingId": "97538d39-7a35-46f1-9809-cf14a0bbf46e",
       "Name": "project-name",
-      "Value": "dotnetSeed2"
+      "Value": "ejtictactoedemo"
     }
   ],
   "ProjectTranspilers": [
@@ -209,7 +209,7 @@
       "ProjectTranspilerId": "64783785-aca0-4d95-b049-9ec3f381ea1e",
       "Name": "OdxmlToSqlServerCreateDb",
       "RelativePath": "/SqlServer",
-      "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ../ODXML/DataSchema.odxml"
+      "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ../ODXML/DataSchema.odxml -p db-name=ejtictactoedemo"
     },
     {
       "MatchedTranspiler": {
