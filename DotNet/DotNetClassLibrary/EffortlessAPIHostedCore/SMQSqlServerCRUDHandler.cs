@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using EffortlessApi.SassyMQ.Lib;
 using EffortlessAPIHostedCore;
-using YourProject.Lib.SqlDataManagement;
+using ejtictactoesqlhostedcore.Lib.SqlDataManagement;
 
 namespace EffortlessAPI.CRUD
 {
