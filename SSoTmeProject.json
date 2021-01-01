@@ -209,7 +209,7 @@
       "ProjectTranspilerId": "64783785-aca0-4d95-b049-9ec3f381ea1e",
       "Name": "OdxmlToSqlServerCreateDb",
       "RelativePath": "/SqlServer",
-      "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ../ODXML/DataSchema.odxml -p db-name=ejtictactoedemo"
+        "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ../ODXML/DataSchema.odxml -p db-name=ejtictactoedemo"
     },
     {
       "MatchedTranspiler": {
