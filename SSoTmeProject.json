@@ -6,13 +6,13 @@
   "CurrentPath": null,
   "SaveDisabled": false,
   "SSoTmeProjectId": "3c107f35-85eb-4847-8bbe-dcdc046b1f16",
-  "Name": "dotnetSeed2",
+  "Name": "ej-tictactoe-demo-sqlhostedcore",
   "RootPath": "C:\\Users\\auto1\\go\\src\\github.com\\effortlessapi\\sd1-sql-server",
   "ProjectSettings": [
     {
       "ProjectSettingId": "73d856e2-d60b-4c31-a91c-a49dec2fbc9f",
       "Name": "amqps",
-      "Value": "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/cli-sd1"
+      "Value": "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/ej-tictactoe-demo"
     },
     {
       "ProjectSettingId": "5e421284-8add-480d-bec1-8e84c1720b26",
