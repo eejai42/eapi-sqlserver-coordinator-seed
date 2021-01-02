@@ -560,6 +560,41 @@
       "Name": "XmlXsltTransform",
       "RelativePath": "/SqlServer/CalculatedViews",
       "CommandLine": "airtable/odxml-to-calculated-sql-server-views -i ..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "28f5de34-0950-48cc-9d02-4da9313e7716",
+        "Name": "SmqlToRabbitMQConfigJson",
+        "DisplayName": "Smql To Rabbit M Q Config Json",
+        "Description": "Smql To Rabbit M Q Config Json",
+        "CreatedOn": "2018-11-17T16:50:05.777",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen--cLV8iSWptmg1Hc2cu4fzw",
+        "LowerName": "smqltorabbitmqconfigjson",
+        "UpperName": "SMQLTORABBITMQCONFIGJSON",
+        "LowerHyphenName": "smql-to-rabbit-m-q-config-json",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "e827499f-f215-4b35-8dae-6bd423a75e4c",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "f07749ed-d4ca-4c8d-b52f-adeb5d3324a0",
+            "TranspilerId": "28f5de34-0950-48cc-9d02-4da9313e7716",
+            "Name": "v1",
+            "CreatedOn": "2018-11-17T16:50:11.43",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "f2c062ef-94fe-4f7b-a7c1-165632ce4001",
+      "Name": "SmqlToRabbitMQConfigJson",
+      "RelativePath": "/SassyMQ",
+      "CommandLine": "sassymq/smql-to-rabbitmq-config-json -i .\\\\Lexicon.smql"
     }
   ]
 }
