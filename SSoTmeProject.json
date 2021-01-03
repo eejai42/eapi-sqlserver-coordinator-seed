@@ -449,43 +449,43 @@
       "CommandLine": "sassymq/smql-to-javascript-rabbitmq -i ../SassyMQ/Lexicon.smql -p legacy=false -p angular=false"
     },
     {
-      "MatchedTranspiler": {
-        "TranspilerId": "19d8142a-2f4d-46ac-9de6-77441f233192",
-        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
-        "Name": "AirtableToXml",
-        "DisplayName": "Airtable To Xml",
-        "Description": "Extracts the contents of an airtable base as a single Xml file.",
-        "CreatedOn": "2018-04-07T21:28:06.273",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-2dkJ2DuOEttKHj50NWdWjA",
-        "LowerName": "airtabletoxml",
-        "UpperName": "AIRTABLETOXML",
-        "LowerHyphenName": "airtable-to-xml",
-        "InputDescriptionMD": "-p baseId={the base id} -p apiKey={your api key} -p ignore-to-name=false\r\n\r\nYou can either provide a full entities.json or specify an individual tab as follows...\r\n            var airtable = this.GetParameterByName(\"airtable\");\r\n            var singular = this.GetParameterByName(\"singular\");\r\n            var plural = this.GetParameterByName(\"plural\");\r\n\r\nYou can also specify an optional view to use\r\n            var view = this.GetParameterByName(\"view\");",
-        "OutputDescriptionMD": "Airtable.xml",
-        "ExampleMD": "ssotme airtable/airtable-to-xml -p baseId=12345",
-        "InputFileTypeId": "2748dae4-2e34-44b1-a268-554f2b1c3330",
-        "OutputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "7f5dec02-6a37-4a68-9f32-ba0b5c79b495",
+        "MatchedTranspiler": {
             "TranspilerId": "19d8142a-2f4d-46ac-9de6-77441f233192",
-            "Name": "v1",
-            "CreatedOn": "2018-04-07T21:28:32.023",
+            "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+            "Name": "AirtableToXml",
+            "DisplayName": "Airtable To Xml",
+            "Description": "Extracts the contents of an airtable base as a single Xml file.",
+            "CreatedOn": "2018-04-07T21:28:06.273",
             "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "CurrentRoutingKey": "amq.gen-2dkJ2DuOEttKHj50NWdWjA",
+            "LowerName": "airtabletoxml",
+            "UpperName": "AIRTABLETOXML",
+            "LowerHyphenName": "airtable-to-xml",
+            "InputDescriptionMD": "-p baseId={the base id} -p apiKey={your api key} -p ignore-to-name=false\r\n\r\nYou can either provide a full entities.json or specify an individual tab as follows...\r\n            var airtable = this.GetParameterByName(\"airtable\");\r\n            var singular = this.GetParameterByName(\"singular\");\r\n            var plural = this.GetParameterByName(\"plural\");\r\n\r\nYou can also specify an optional view to use\r\n            var view = this.GetParameterByName(\"view\");",
+            "OutputDescriptionMD": "Airtable.xml",
+            "ExampleMD": "ssotme airtable/airtable-to-xml -p baseId=12345",
+            "InputFileTypeId": "2748dae4-2e34-44b1-a268-554f2b1c3330",
+            "OutputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
+            "TranspileRequests": [],
             "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": null,
-      "ProjectTranspilerId": "888c08db-dd7f-49c8-af41-b3310a0bd377",
-      "Name": "AirtableToXml",
-      "RelativePath": "/Staticdata",
-      "CommandLine": "airtable/airtable-to-xml -p baseId=$appId$ -i ..\\SSoT\\Entities.json"
+            "TranspilerVersions": [
+                {
+                    "TranspilerVersionId": "7f5dec02-6a37-4a68-9f32-ba0b5c79b495",
+                    "TranspilerId": "19d8142a-2f4d-46ac-9de6-77441f233192",
+                    "Name": "v1",
+                    "CreatedOn": "2018-04-07T21:28:32.023",
+                    "IsActive": true,
+                    "TranspilerFileTypeId_TranspilerInputHints": [],
+                    "TranspilerInstances": [],
+                    "ReplacedByTranspilerVersionId_TranspilerVersions": []
+                }
+            ]
+        },
+        "CLIHandler": null,
+        "ProjectTranspilerId": "888c08db-dd7f-49c8-af41-b3310a0bd377",
+        "Name": "AirtableToXml",
+        "RelativePath": "/Staticdata",
+        "CommandLine": "airtable/airtable-to-xml -p baseId=$EffortlessAPIProject.AirtableId$ -i ..\\SSoT\\Entities.json"
     },
     {
       "MatchedTranspiler": {
