@@ -485,7 +485,7 @@
       "ProjectTranspilerId": "888c08db-dd7f-49c8-af41-b3310a0bd377",
       "Name": "AirtableToXml",
       "RelativePath": "/Staticdata",
-      "CommandLine": "airtable/airtable-to-xml -p baseId=appmb31vFV4WjH2j0 -i ..\\SSoT\\Entities.json"
+      "CommandLine": "airtable/airtable-to-xml -p baseId=$appId$ -i ..\\SSoT\\Entities.json"
     },
     {
       "MatchedTranspiler": {
