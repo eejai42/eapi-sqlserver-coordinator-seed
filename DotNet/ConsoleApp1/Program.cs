@@ -11,8 +11,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var amqps = "amqps://ej-tictactoe-demo_coordinator:test@effortlessapi-rmq.ssot.me/ej-tictactoe-demo";
-            var crudHandler = new SMQSqlServerCRUDHandler(amqps, "data source=.;initial catalog=ej-tictactoe-demo;integrated security=SSPI;", "C:/EAPISqlHostedCore/ej-tictactoe-demo");
+            var amqps = "amqp://coordinator:test@localhost/ej-tictactoe-demo";
+            var crudHandler = new SMQSqlServerCRUDHandler(amqps, "data source=.;initial catalog=ejtictactoedemo;integrated security=SSPI;", "C:/EAPISqlHostedCore/ej-tictactoe-demo");
             crudHandler.Start();
         }
     }
