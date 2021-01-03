@@ -52,7 +52,7 @@
     {
         "Name": "baseId",
         "Value": "app123abc321"
-    }
+    },
     {
       "ProjectSettingId": "0b9e2524-2f35-4d8f-86e0-8bd2aaf251e8",
       "Name": "dataclasses-namespace",
