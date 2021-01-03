@@ -45,10 +45,14 @@
       "Value": "false"
     },
     {
-      "ProjectSettingId": "94d49088-739f-4063-b1e9-22316a7a0903",
-      "Name": "namespace",
-      "Value": "ejtictactoedemo.Lib.DataClasses"
+        "ProjectSettingId": "94d49088-739f-4063-b1e9-22316a7a0903",
+        "Name": "namespace",
+        "Value": "ejtictactoedemo.Lib.DataClasses"
     },
+    {
+        "Name": "baseId",
+        "Value": "app123abc321"
+    }
     {
       "ProjectSettingId": "0b9e2524-2f35-4d8f-86e0-8bd2aaf251e8",
       "Name": "dataclasses-namespace",
@@ -485,7 +489,7 @@
         "ProjectTranspilerId": "888c08db-dd7f-49c8-af41-b3310a0bd377",
         "Name": "AirtableToXml",
         "RelativePath": "/Staticdata",
-        "CommandLine": "airtable/airtable-to-xml -p baseId=$EffortlessAPIProject.AirtableId$ -i ..\\SSoT\\Entities.json"
+        "CommandLine": "airtable/airtable-to-xml -i ..\\SSoT\\Entities.json"
     },
     {
       "MatchedTranspiler": {
