@@ -18,7 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Server", "SQL Server", 
 	ProjectSection(SolutionItems) = preProject
 		..\sd1-sql-server\SqlServer\CalculatedViews\CalculatedViews.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\CalculatedViews.sql
 		..\sd1-sql-server\SqlServer\CalculatedViews\SynchronizeRawValues.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\SynchronizeRawValues.sql
-		..\sd1-sql-server\SqlServer\CalculatedViews\temp.sql = ..\sd1-sql-server\SqlServer\CalculatedViews\temp.sql
 	EndProjectSection
 EndProject
 Global
